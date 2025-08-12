@@ -12,6 +12,10 @@ RUN npm install
 # Salin seluruh file
 COPY . .
 
+# Tambahkan variable untuk env
+ENV VITE_APP_NAME=${VITE_APP_NAME}
+ENV VITE_APP_USERNAME=${VITE_APP_USERNAME}
+
 RUN npm run build
 
 # Jalankan aplikasi
