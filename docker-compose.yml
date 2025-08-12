@@ -4,9 +4,13 @@ name: "react"
 
 services:
   app:
-    build: .
+    build:
+      context: .
+      args:
+        VITE_APP_NAME: "${VITE_APP_NAME}"
+        VITE_APP_USERNAME: "${VITE_APP_USERNAME}"
     ports:
       - "8080:8080"
-    environment:
-      - VITE_APP_NAME=${APP_NAME}
-      - VITE_APP_USERNAME=${APP_USERNAME}
+    # environment:
+    #   - VITE_APP_NAME=${APP_NAME}
+    #   - VITE_APP_USERNAME=${APP_USERNAME}
