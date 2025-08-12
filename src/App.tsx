@@ -6,6 +6,8 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 
+  console.log('test 1');
+  
   console.log({
     APP_NAME: import.meta.env.VITE_APP_NAME ?? 'Default App Name',
     APP_USERNAME: import.meta.env.VITE_APP_USERNAME ?? 'Default App Username',
